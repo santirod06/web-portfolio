@@ -1,0 +1,152 @@
+:root {
+  --bg-dark: #0d1117;
+  --bg-glass: rgba(13, 17, 23, 0.75);
+  --blue-accent: #1f6feb;
+  --text-light: #e6edf3;
+  --hover-blue: #58a6ff;
+  --border-color: #1a1f24;
+  --glass-blur: blur(12px);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark); 
+  color: var(--text-light);
+  font-family: 'Segoe UI', sans-serif;
+  padding-top: 100px; /* Espacio para el header fixed */
+}
+
+.island-header {
+  user-select: none;
+  background-color: var(--bg-glass);
+  backdrop-filter: var(--glass-blur);
+  border-radius: 2rem;
+  padding: 0.8rem 2rem;
+  margin: 2rem auto;
+  max-width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: fixed; 
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  overflow: visible;
+}
+
+nav {
+  display: flex;
+  gap: 8rem;
+}
+
+nav a {
+  position: relative;
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  display: inline-block;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: var(--hover-blue);
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--hover-blue);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  color: var(--text-light);
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  body {
+    padding-top: 5rem; 
+  }
+
+  .island-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 1rem;
+    border-radius: 1.5rem;
+    max-height: 5rem;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    margin: 1rem auto; /* Menos margen en mobile */
+  }
+
+  .island-header.open {
+    max-height: 320px;
+    padding: 1rem 1.5rem;
+  }
+
+  nav {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .island-header.open nav {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  nav a {
+    padding: 0.75rem 0;
+    display: inline-block;
+    width: auto;
+    text-align: left;
+    border-top: 1px solid var(--border-color);
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+  }
+
+  nav a::after {
+    display: none;
+    background-color: transparent;
+  }
+
+  .menu-toggle {
+    display: block;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+  }
+}
