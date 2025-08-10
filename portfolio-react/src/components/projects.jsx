@@ -4,16 +4,19 @@ import { useState } from "react";
 import example1 from "./images/example.png";
 import example2 from "./images/example2.png";
 
+/* Aca subo la lista de proyectos a mostrar, con sus nombres, imagenes, descripcion y github */
 const projectsList = [
   {
     title: "E-commerce1",
     images: [example1],
-    description: "tienda online funcional, responsive",
+    description: "tienda online funcional, hecha con: JavaScript, HTML y CSS",
+    github: "https://github.com/santirod06",
   },
   {
     title: "E-commerce2",
     images: [example1, example2],
     description: "tienda online funcional, responsive",
+    github: "https://github.com/santirod06",
   },
 ];
 
@@ -51,7 +54,7 @@ const Projects = () => {
       <div className="projects-inner">
         <h2> PROYECTOS </h2>
 
-        {/* Mostramos cada tarjeta */}
+        {/* Mostramos cada tarjeta, el map filtra cada proyecto del arreglo de objetos y crea un div con toda la info por c/u */}
         <div className="projects-grid">
           {projectsList.map((project) => (
             <div
@@ -62,6 +65,14 @@ const Projects = () => {
               <img src={project.images[0]} alt={project.title} />
               <h3> {project.title} </h3>
               <p> {project.description} </p>
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="github-link"
+              >
+                ver en github
+              </a>
             </div>
           ))}
         </div>
