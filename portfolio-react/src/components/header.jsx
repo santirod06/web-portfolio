@@ -10,8 +10,8 @@ const Header = () => {
         ☰
       </button>
       <nav>
-        <a href="#about"> Sobre mi </a>
-        <a href="#tecnologies"> Tecnologias </a>
+        <a href="#about"> Sobre mí </a>
+        <a href="#tecnologies"> Tecnologías </a>
         <a href="#projects"> Proyectos </a>
         <a href="#contact"> Contacto </a>
       </nav>

@@ -9,9 +9,9 @@ import postgresqlLogo from "./icons/postgresql-icon.png";
 
 const Technologies = () => {
   return (
-    <section className="technologies-section">
+    <section className="technologies-section" id='tecnologies'>
       <div className="technologies-inner">
-        <h2 className="technologies-title"> TECNOLOGIAS </h2>
+        <h2 className="technologies-title"> TECNOLOGÍAS </h2>
 
         <div className="technologies-grid">
           <div className="tech-card">

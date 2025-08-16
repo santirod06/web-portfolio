@@ -1,0 +1,87 @@
+:root {
+  --bg-dark: #0d1117;
+  --bg-glass: rgba(13, 17, 23, 0.75);
+  --blue-accent: #1f6feb;
+  --text-light: #e6edf3;
+  --hover-blue: #58a6ff;
+  --border-color: #1a1f24;
+  --glass-blur: blur(12px);
+}
+
+
+/* Para que no salga la barra de abajo... */
+body {
+  overflow-x: hidden;
+}
+
+
+
+.contact-me {
+  background-color: transparent;
+  color: var(--text-light);
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 3rem;
+  user-select: none;
+}
+.contact-me h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: color 0.3s, transform 0.3s;
+}
+.contact-me h2:hover {
+  color: var(--hover-blue);
+  transform: scale(1.08);
+}
+
+
+
+.contact-icons {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Si no entra baja a la otra linea (responsive) */
+}
+.contact-icons a {
+  background-color: var(--bg-glass);
+  border: 1px solid var(--border-color);
+  backdrop-filter: var(--glass-blur);
+  border-radius: 0.9rem;
+  width: 100px;
+  height: 100px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-icons a:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px var(--blue-accent);
+  color: var(--blue-accent);
+}
+.contact-icons a svg {
+  width: 60%;
+  height: 60%;
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .contact-me h2 {
+    font-size: 3rem; /* más chico en tablet/móvil */
+  }
+
+  .contact-icons a {
+    width: 90px;
+    height: 90px; /* botones más chicos */
+  }
+}

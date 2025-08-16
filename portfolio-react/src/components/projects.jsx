@@ -18,6 +18,18 @@ const projectsList = [
     description: "tienda online funcional, responsive",
     github: "https://github.com/santirod06",
   },
+  {
+    title: "E-commerce1",
+    images: [example1],
+    description: "tienda online funcional, hecha con: JavaScript, HTML y CSS",
+    github: "https://github.com/santirod06",
+  },
+  {
+    title: "E-commerce2",
+    images: [example1, example2],
+    description: "tienda online funcional, responsive",
+    github: "https://github.com/santirod06",
+  },
 ];
 
 const Projects = () => {
@@ -49,10 +61,14 @@ const Projects = () => {
     );
   };
 
+
+
+
   return (
     <section className="projects-section">
       <div className="projects-inner">
-        <h2> PROYECTOS </h2>
+        <h2 id='projects'> PROYECTOS </h2>
+
 
         {/* Mostramos cada tarjeta, el map filtra cada proyecto del arreglo de objetos y crea un div con toda la info por c/u */}
         <div className="projects-grid">
@@ -76,6 +92,7 @@ const Projects = () => {
             </div>
           ))}
         </div>
+
 
         {/* mostrar solo si modalOpen es true */}
         {modalOpen && (

@@ -12,7 +12,7 @@
 
 /* Seccion general de projects */
 .projects-section {
-  background-color: var(--bg-dark);
+  background-color: transparent;
   padding: 4rem 2rem;
   min-height: 100vh;
   color: var(-text--light);
@@ -72,7 +72,7 @@
 }
 .project-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px var(--blue-accent);
+  box-shadow: 0 0 20px var(--blue-accent);
 }
 /* Imagen de cada uno */
 .project-card img {
@@ -184,7 +184,7 @@
   }
   
   .projects-section h2 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   
   .projects-grid {

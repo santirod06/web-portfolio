@@ -3,7 +3,7 @@ import "./about-me.css";
 
 const AboutMe = () => {
   return (
-    <section className="aboutme-container">
+    <section className="aboutme-container" id='about'>
       <div className='text-wrapper'> 
       <TypeAnimation
         sequence={[
@@ -20,7 +20,7 @@ const AboutMe = () => {
       />
 
       <div className='text-wrapper'> 
-        <h1 className="name-text"> Santiago Rodriguez </h1>
+        <h1 className="name-text"> Santiago Rodríguez </h1>
         
         <h2 className="subtitle-text"> Desarrollador Web </h2>
         

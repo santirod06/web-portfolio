@@ -9,7 +9,7 @@
 }
 
 .technologies-section {
-  background-color: var(--bg-dark);
+  background-color: transparent;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -80,7 +80,7 @@
 
 .tech-card:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 15px var(--blue-accent);
+  box-shadow: 0 0 20px var(--blue-accent);
 }
 
 .tech-card img {
@@ -111,7 +111,7 @@
   }
 
   .technologies-title {
-    font-size: 2.rem;
+    font-size: 3rem;
     margin-left: 0;
   }
 

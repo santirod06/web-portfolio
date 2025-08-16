@@ -10,13 +10,13 @@
 }
 
 .aboutme-container {
-  background-color: var(--bg-glass);
+  background-color: transparent;
   width: 100%; /* ocupa todo el ancho */
   display: flex;
   justify-content: center; /* centra el contenido interno */
   align-items: center;
   user-select: none;
-  min-height: 100vh;
+  min-height: 80vh;
   animation: fadeInUp 2s ease-out;
 }
 @keyframes fadeInUp {
