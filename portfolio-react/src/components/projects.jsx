@@ -10,6 +10,7 @@ import login2 from './images/login2.png';
 import passwordGenerator1 from './images/password-generator1.png';
 import passwordGenerator2 from './images/password-generator2.png';
 import backendProjectImage from './images/backend-project-image.png';
+import webPortfolio from './images/web-portfolio.png';
 
 
 /* Aca subo la lista de proyectos a mostrar, con sus nombres, imagenes, descripcion y github */
@@ -41,6 +42,13 @@ const projectsList = [
     description: "API RESTful para gestionar usuarios, clases y reservas. Incluye CRUD completo, validacion de cupos y prevención de reservas duplicadas.",
     techs: "Node.js • Express • MongoDB",
     github: "https://github.com/santirod06/backend-reservas",
+  },
+  {
+    title: "Portfolio Web Personal",
+    images: [webPortfolio],
+    description: "Portfolio interactivo de proyectos web personales, con diseño responsivo, animaciones y fondo animado.",
+    techs: "React • JavaScript • HTML • CSS",
+    github: "https://github.com/santirod06/web-portfolio",
   },
 ];
 

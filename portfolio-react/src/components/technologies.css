@@ -36,15 +36,14 @@
   line-height: 1.1;
   letter-spacing: -0.02rem;
   margin-bottom: 1rem;
-  margin-left: 1rem;
   letter-spacing: 1px;
-  text-align: left;
+  text-align: center;
   transition: color 0.3s, transform 0.3s;
   width: 100%;
 }
 .technologies-title:hover {
   color: var(--hover-blue);
-  transform: translateX(5px);
+  transform: scale(1.08);
 }
 
 
