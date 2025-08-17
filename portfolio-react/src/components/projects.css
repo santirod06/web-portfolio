@@ -88,9 +88,22 @@
 }
 .project-card p {
   margin: 0; 
-  font-size: 1rem; 
+  font-size: 0.9rem; 
   opacity: 0.8; 
   text-align: center; 
+}
+.tech-title {
+  margin-top: 1rem !important;   
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--text-light); 
+}
+
+.project-techs {
+  margin-top: 0.5rem !important;  
+  font-size: 0.9rem;
+  color: var(--text-light);
+  opacity: 0.85;
 }
 .github-link {
   margin-top: 0.8rem;
@@ -103,6 +116,8 @@
   color: var(--hover-blue);
   text-decoration: underline;
 }
+
+
 
 
 

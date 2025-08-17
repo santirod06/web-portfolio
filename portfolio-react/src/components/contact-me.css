@@ -77,11 +77,11 @@ body {
 
 @media (max-width: 768px) {
   .contact-me h2 {
-    font-size: 3rem; /* más chico en tablet/móvil */
+    font-size: 3rem; 
   }
 
   .contact-icons a {
     width: 90px;
-    height: 90px; /* botones más chicos */
+    height: 90px;
   }
 }

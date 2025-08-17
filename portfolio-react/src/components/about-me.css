@@ -11,9 +11,9 @@
 
 .aboutme-container {
   background-color: transparent;
-  width: 100%; /* ocupa todo el ancho */
+  width: 100%; 
   display: flex;
-  justify-content: center; /* centra el contenido interno */
+  justify-content: center; 
   align-items: center;
   user-select: none;
   min-height: 80vh;
@@ -103,20 +103,3 @@
   }
 }
 
-/* @media (min-width: 1025px) {
-  .aboutme-container {
-    padding: 8rem 2rem 6rem;
-  }
-  .intro-text {
-    font-size: 1.4rem;
-  }
-  .name-text {
-    font-size: 4.5rem;
-  }
-  .subtitle-text {
-    font-size: 1.8rem;
-  }
-  .description-text {
-    font-size: 1.2rem;
-  }
-} */

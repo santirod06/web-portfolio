@@ -107,7 +107,7 @@
 /* DISEÑO RESPONSIVE */
 @media (max-width: 768px) {
   .technologies-section {
-     padding: 4rem 1.5rem 3rem; /* menos padding en mobile */
+     padding: 4rem 1.5rem 3rem; 
   }
 
   .technologies-title {
@@ -123,11 +123,11 @@
   }
 
   .tech-card {
-    padding: 0.8rem; /* menos padding */
+    padding: 0.8rem; 
   }
 
   .tech-card img {
-    width: 50px; /* más pequeño */
+    width: 50px;
     height: 45px;
   }
 

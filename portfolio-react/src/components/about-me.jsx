@@ -13,8 +13,8 @@ const AboutMe = () => {
           1000, // Espera 1 segundo antes de volver a escribir
         ]}
         wrapper="p"
-        speed={50}
-        deletionSpeed={30}
+        speed={10}
+        deletionSpeed={10}
         className="intro-text"
         repeat={Infinity}
       />
@@ -25,7 +25,7 @@ const AboutMe = () => {
         <h2 className="subtitle-text"> Desarrollador Web </h2>
         
         <p className="description-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id mollitia, voluptates porro molestias assumenda, minima voluptatibus ad labore aperiam dolorum illum tenetur consectetur cum quia possimus. Perspiciatis, corrupti similique quas iusto distinctio eos ab sint in modi. Et, repudiandae fugiat.
+            Soy estudiante de Ingeniería en Computación y desarrollador web autodidacta, apasionado por crear proyectos que resuelvan problemas reales. Disfruto aprender constantemente, experimentar con nuevas herramientas y mejorar mis habilidades a través de proyectos personales y desafíos prácticos.
         </p>
         </div>
       </div> 

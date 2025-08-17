@@ -1,39 +1,51 @@
 import "./projects.css";
 import { useState } from "react";
 
-import example1 from "./images/example.png";
-import example2 from "./images/example2.png";
+import eCommerce1 from './images/e-commerce1.png';
+import eCommerce2 from './images/e-commerce2.png';
+import eCommerce3 from './images/e-commerce3.png';
+import eCommerce4 from './images/e-commerce4.png';
+import login1 from './images/login1.png';
+import login2 from './images/login2.png';
+import passwordGenerator1 from './images/password-generator1.png';
+import passwordGenerator2 from './images/password-generator2.png';
+import backendProjectImage from './images/backend-project-image.png';
+
 
 /* Aca subo la lista de proyectos a mostrar, con sus nombres, imagenes, descripcion y github */
 const projectsList = [
   {
-    title: "E-commerce1",
-    images: [example1],
-    description: "tienda online funcional, hecha con: JavaScript, HTML y CSS",
-    github: "https://github.com/santirod06",
+    title: "E-Commerce",
+    images: [eCommerce2, eCommerce3, eCommerce4, eCommerce1],
+    description: "Proyecto final de JAP: e-commerce con funcionalidades completas de compra, carrito, autenticación y gestión de productos",
+    techs: "JavaScript • HTML • CSS • Node.js",
+    github: "https://github.com/santirod06/ProyectoJAP",
   },
   {
-    title: "E-commerce2",
-    images: [example1, example2],
-    description: "tienda online funcional, responsive",
-    github: "https://github.com/santirod06",
+    title: "Sistema de Autenticación",
+    images: [login2, login1],
+    description: "Aplicacion Full-Stack de un sistema seguro de registro e inicio de sesión, con manejo de tokens JWT y proteccion de rutas, incluye validaciones avanzadas y cifrado de contraseñas con bcrypt.",
+    techs: "React • Node.js • Express • MongoDB",
+    github: "https://github.com/santirod06/Auth-project",
   },
   {
-    title: "E-commerce1",
-    images: [example1],
-    description: "tienda online funcional, hecha con: JavaScript, HTML y CSS",
-    github: "https://github.com/santirod06",
+    title: "Generador de Contraseñas",
+    images: [passwordGenerator1, passwordGenerator2],
+    description: "Aplicación en React que permite generar contraseñas fuertes, personalizando longitud, uso de mayúsculas, números y símbolos.",
+    techs: "React",
+    github: "https://github.com/santirod06/password-generator",
   },
   {
-    title: "E-commerce2",
-    images: [example1, example2],
-    description: "tienda online funcional, responsive",
-    github: "https://github.com/santirod06",
+    title: "API de Reservas de Clases",
+    images: [backendProjectImage],
+    description: "API RESTful para gestionar usuarios, clases y reservas. Incluye CRUD completo, validacion de cupos y prevención de reservas duplicadas.",
+    techs: "Node.js • Express • MongoDB",
+    github: "https://github.com/santirod06/backend-reservas",
   },
 ];
 
 const Projects = () => {
-  const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false); // arranca falso (cerrado)
   const [currentProjectImages, setCurrentProjectImages] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -44,7 +56,7 @@ const Projects = () => {
     setModalOpen(true);
   };
 
-  // Funcion para cerrar el modal
+  // Funcion para cerrar el modal 
   const closeModal = () => {
     setModalOpen(false);
   };
@@ -70,7 +82,7 @@ const Projects = () => {
         <h2 id='projects'> PROYECTOS </h2>
 
 
-        {/* Mostramos cada tarjeta, el map filtra cada proyecto del arreglo de objetos y crea un div con toda la info por c/u */}
+        {/* Mostramos cada tarjeta, el map filtra cada proyecto del arreglo de objetos y crea un div con toda la info (es la card completa) por c/u */}
         <div className="projects-grid">
           {projectsList.map((project) => (
             <div
@@ -78,9 +90,15 @@ const Projects = () => {
               className="project-card"
               onClick={() => openModal(project.images)}
             >
-              <img src={project.images[0]} alt={project.title} />
+              <img src={project.images[0]} alt={project.title} /> {/* Muestro la info correspondiente de cada proyecto en la tarjeta */}
+              
               <h3> {project.title} </h3>
+              
               <p> {project.description} </p>
+
+              <p className="tech-title"> Tecnologías: </p>
+              <p className="project-techs"> {project.techs} </p> 
+
               <a
                 href={project.github}
                 target="_blank"
@@ -94,7 +112,7 @@ const Projects = () => {
         </div>
 
 
-        {/* mostrar solo si modalOpen es true */}
+        {/* Función para mostrar el modal si esta openModal en true */}
         {modalOpen && (
           <div className="modal" onClick={closeModal}>
             {/* Botón para ir a la imagen anterior */}

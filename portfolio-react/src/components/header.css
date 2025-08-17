@@ -8,6 +8,7 @@
   --glass-blur: blur(12px);
 }
 
+/* Movimiento suave cuando uso el header*/
 html {
   scroll-behavior: smooth;
 }
@@ -109,7 +110,7 @@ nav a:hover::after {
     max-height: 5rem;
     overflow: hidden;
     transition: max-height 0.4s ease;
-    margin: 1rem auto; /* Menos margen en mobile */
+    margin: 1rem auto; 
   }
 
   .island-header.open {
