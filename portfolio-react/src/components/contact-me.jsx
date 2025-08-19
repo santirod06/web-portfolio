@@ -37,7 +37,7 @@ const ContactMe = () => {
         </a>
 
         <a
-          href="https://github.com/tu-usuario"
+          href="https://github.com/santirod06"
           target="_blank"
           rel="noopener noreferrer"
         >
