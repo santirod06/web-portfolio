@@ -29,7 +29,7 @@ const projectsList = [
     images: [bakery1, bakery2],
     description: "Pagina responsive completa desarrollada en React con Vite, teniendo secciones informativas, galería, testiomonios y formularios, optimizando la experiencia al usuario",
     techs: "React • JavaScript • HTML • CSS",
-    github: "https://github.com/santirod06/ProyectoJAP",
+    github: "https://github.com/santirod06/bakery-landing-page",
     demo: "https://bakery-landing-page-orpin.vercel.app/",
   },
   {
