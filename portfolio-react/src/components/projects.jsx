@@ -5,6 +5,8 @@ import eCommerce1 from './images/e-commerce1.png';
 import eCommerce2 from './images/e-commerce2.png';
 import eCommerce3 from './images/e-commerce3.png';
 import eCommerce4 from './images/e-commerce4.png';
+import bakery1 from './images/bakery1.png';
+import bakery2 from './images/bakery2.png';
 import login1 from './images/login1.png';
 import login2 from './images/login2.png';
 import passwordGenerator1 from './images/password-generator1.png';
@@ -21,6 +23,14 @@ const projectsList = [
     description: "Proyecto final de JAP: e-commerce con funcionalidades completas de compra, carrito, autenticación y gestión de productos",
     techs: "JavaScript • HTML • CSS • Node.js",
     github: "https://github.com/santirod06/ProyectoJAP",
+  },
+  {
+    title: "Bakery Landing Page",
+    images: [bakery1, bakery2],
+    description: "Pagina responsive completa desarrollada en React con Vite, teniendo secciones informativas, galería, testiomonios y formularios, optimizando la experiencia al usuario",
+    techs: "React • JavaScript • HTML • CSS",
+    github: "https://github.com/santirod06/ProyectoJAP",
+    demo: "https://bakery-landing-page-orpin.vercel.app/",
   },
   {
     title: "Sistema de Autenticación",
@@ -87,7 +97,7 @@ const Projects = () => {
   return (
     <section className="projects-section">
       <div className="projects-inner">
-        <h2 id='projects'> PROYECTOS </h2>
+        <h2 id='projects'> PROYECTOS & TRABAJOS FREELANCE </h2>
 
 
         {/* Mostramos cada tarjeta, el map filtra cada proyecto del arreglo de objetos y crea un div con toda la info (es la card completa) por c/u */}
@@ -115,6 +125,17 @@ const Projects = () => {
               >
                 ver en github
               </a>
+
+              {project.demo && ( // Para que aparezca el <a> SOLO en los que pongo un link de demo
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="github-link"
+                >
+                  probar App
+                </a>
+               )}
             </div>
           ))}
         </div>
