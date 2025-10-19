@@ -5,6 +5,10 @@ import eCommerce1 from './images/e-commerce1.png';
 import eCommerce2 from './images/e-commerce2.png';
 import eCommerce3 from './images/e-commerce3.png';
 import eCommerce4 from './images/e-commerce4.png';
+import chismelatte1 from './images/Chismelatte1.png';
+import chismelatte2 from './images/Chismelatte2.png';
+import chismelatte3 from './images/Chismelatte3.png';
+import enrutagps0 from './images/enrutagps.png'
 import bakery1 from './images/bakery1.png';
 import bakery2 from './images/bakery2.png';
 import login1 from './images/login1.png';
@@ -25,9 +29,22 @@ const projectsList = [
     github: "https://github.com/santirod06/ProyectoJAP",
   },
   {
+    title: "Chismelatte Landing Page",
+    images: [chismelatte1, chismelatte2, chismelatte3],
+    description: "Página web responsive para una cafetería, desarrollada con React, con objetivo de tener las secciónes informativas mas importantes y información de facil acceso para el usuario",
+    techs: "React • JavaScript • HTML • CSS",
+    demo: "https://web-chismelatte.vercel.app/",
+  },
+  {
+    title: "EnRutaGPS Web Corporativa (EN DESARROLLO)",
+    images: [enrutagps0],
+    description: "Sitio web corporativo responsive desarrollado en React, diseñado para una empresa de soluciones GPS.",
+    techs: "React • JavaScript • HTML • CSS • Node.js",
+  },
+  {
     title: "Bakery Landing Page",
     images: [bakery1, bakery2],
-    description: "Pagina responsive completa desarrollada en React con Vite, teniendo secciones informativas, galería, testiomonios y formularios, optimizando la experiencia al usuario",
+    description: "Página responsive como ejemplo para clientes, completamente desarrollada en React con Vite, teniendo secciones informativas, galería, testiomonios y formularios, optimizando la experiencia al usuario",
     techs: "React • JavaScript • HTML • CSS",
     github: "https://github.com/santirod06/bakery-landing-page",
     demo: "https://bakery-landing-page-orpin.vercel.app/",
@@ -117,14 +134,16 @@ const Projects = () => {
               <p className="tech-title"> Tecnologías: </p>
               <p className="project-techs"> {project.techs} </p> 
 
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="github-link"
-              >
-                ver en github
-              </a>
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="github-link"
+                >
+                  ver en github
+                </a>
+              )}
 
               {project.demo && ( // Para que aparezca el <a> SOLO en los que pongo un link de demo
                 <a
